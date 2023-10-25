@@ -4,9 +4,9 @@ import Header from "./header";
 function Layout({ children }) {
 	return (
 		<>
-			<Header/>
+			<Header />
 			{children}
-			<Outlet/>
+			<Outlet />
 		</>
 	);
 }
