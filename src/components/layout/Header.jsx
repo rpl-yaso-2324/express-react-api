@@ -1,5 +1,5 @@
 //import component Bootstrap-React
-import { Navbar, Container, Nav } from 'react-bootstrap'
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
 //import react router-dom
 import {Link} from "react-router-dom";

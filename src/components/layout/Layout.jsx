@@ -9,6 +9,6 @@ function Layout({children}){
         <Outlet/> 
         </>
     );
-}
+};
 
 export default Layout;
