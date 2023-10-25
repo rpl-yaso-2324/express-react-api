@@ -10,14 +10,14 @@ function Header(params) {
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="me-auto">
 						<Nav.Link>
-						  <Link to="/" className="nav-link">
+						   <Link to="/" className="nav-link">
 							HOME
-						  </Link>
+						   </Link>
 						</Nav.Link>
 						<Nav.Link>
-						  <Link to="/posts" className="nav-link">
+						   <Link to="/posts" className="nav-link">
 							POSTS
-						  </Link>  
+						   </Link>  
 						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
