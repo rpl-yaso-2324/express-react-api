@@ -1,7 +1,14 @@
+
 import { Card, Container, Row, Col } from 'react-bootstrap'
 
 function IndexPost() {
+
+
+
     return (
+
+
+
         <Container className="mt-3">
             <Row>
                 <Col md="{12}">
