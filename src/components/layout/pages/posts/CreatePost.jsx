@@ -9,7 +9,7 @@ function CreatePost() {
 					<Card className="border-0 rounded shadow-sm">
 						<Card.Body>
                             HALAMAN CREATE POST
-                            </Card.Body>
+                        </Card.Body>
 					</Card>
 				</Col>
 			</Row>
