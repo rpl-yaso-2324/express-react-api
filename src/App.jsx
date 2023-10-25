@@ -1,12 +1,19 @@
+import CreatePost from "../pages/posts/CreatePost";
+import EditPost from "../pages/posts/EditPost";
+import IndexPost from "../pages/posts/IndexPost";
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
+          <Route exact path="/posts" component={IndexPost} />
+        <Route exact path="/posts/create" component={CreatePost} />
+        <Route exact path="/posts/edit/:id" component={EditPost} />
+          {/* <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
+          <Route path="*" element={<NoPage />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
