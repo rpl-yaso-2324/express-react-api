@@ -14,7 +14,7 @@ function Header(params) {
 						</Nav.Link>
 						<Nav.Link as={Link} to="/posts" className="nav-link">
 							POSTS
-						</Nav.Link>
+						</Nav.Link> 
 					</Nav>
 				</Navbar.Collapse>
 			</Container>
