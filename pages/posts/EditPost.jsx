@@ -1,14 +1,14 @@
 //import component Bootstrap React
 import { Card, Container, Row, Col } from 'react-bootstrap'
 
-function CreatePost() {
+function EditPost() {
     return (
         <Container className="mt-3">
             <Row>
                 <Col md="{12}">
                     <Card className="border-0 rounded shadow-sm">
                         <Card.Body>
-                            HALAMAN CREATE POST
+                            HALAMAN EDIT POST
                         </Card.Body>
                     </Card>
                 </Col>
@@ -17,4 +17,4 @@ function CreatePost() {
     );
 }
 
-export default CreatePost;
+export default EditPost;
