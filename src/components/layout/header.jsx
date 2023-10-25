@@ -19,16 +19,6 @@ function Header() {
                                 POSTS
                             </Link>
                         </Nav.Link>
-                        <Nav.Link>
-                            <Link to="/posts/create" className="nav-link">
-                                CREATE
-                            </Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link to="/posts/edit/:id" className="nav-link">
-                                EDIT
-                            </Link>
-                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
