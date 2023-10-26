@@ -1,7 +1,7 @@
 //import component Bootstrap React
 import { Card, Container, Row, Col } from "react-bootstrap";
 
-function EditPosts() {
+function EditPost() {
 	return (
 		<Container className="mt-3">
 			<Row>
@@ -15,4 +15,4 @@ function EditPosts() {
 	);
 }
 
-export default EditPosts;
+export default EditPost;

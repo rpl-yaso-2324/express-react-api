@@ -1,7 +1,7 @@
-//import component Bootstrap React
+///import component Bootstrap React
 import { Card, Container, Row, Col } from "react-bootstrap";
 
-function CreatePosts() {
+function CreatePost() {
 	return (
 		<Container className="mt-3">
 			<Row>
@@ -15,4 +15,4 @@ function CreatePosts() {
 	);
 }
 
-export default CreatePosts;
+export default CreatePost;

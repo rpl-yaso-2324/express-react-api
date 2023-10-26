@@ -11,9 +11,9 @@ function App () {
       <Routes>
         <Route path="/" element={<Layout />}>
          <Route index element={<Home />}/>
-         <Route path="/posts" component={<IndexPost/>} />
-         <Route path="/posts/create" component={<CreatePost/>} />
-         <Route path="/posts/edit/:id" component={<EditPost/>} />
+         <Route path="/posts" element={<IndexPost/>} />
+         <Route path="/posts/create" element={<CreatePost/>} />
+         <Route path="/posts/edit/:id" element={<EditPost/>} />
         </Route>
       </Routes>
     </BrowserRouter>
