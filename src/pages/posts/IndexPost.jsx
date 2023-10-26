@@ -1,15 +1,13 @@
-//import component Bootstrap React
+
 import { Card, Container, Row, Col } from 'react-bootstrap'
 
-function EditPost() {
+function IndexPost() {
     return (
         <Container className="mt-3">
             <Row>
                 <Col md="{12}">
                     <Card className="border-0 rounded shadow-sm">
-                        <Card.Body>
-                            HALAMAN EDIT POST
-                        </Card.Body>
+                        <Card.Body>HALAMAN INDEX POST</Card.Body>
                     </Card>
                 </Col>
             </Row>
@@ -17,4 +15,4 @@ function EditPost() {
     );
 }
 
-export default EditPost;
+export default IndexPost;
