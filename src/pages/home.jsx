@@ -3,8 +3,10 @@ import { Card, Container, Row, Col, Button } from 'react-bootstrap'
 
 function Home() {
     const [warna, setWarna] = useState('berhenti');
+    const [ukuran, setUkuran] = useState('fs-5');
 
     return (
+        <>
         <Container className="mt-3">
             <Row>
                 <Col md="{12}">
@@ -17,17 +19,33 @@ function Home() {
                     </Card>
                 </Col>
             </Row>
-            <button type="button"  onClick={() => setWarna('berhenti')}>
+            <h1>WARNA</h1>
+            <Button type="button" variant="danger" onClick={() => setWarna('berhenti')}>
                 merah
-            </button>
-            <button type="button" onClick={() => setWarna('pelan-pelan')}>
+            </Button>
+            <Button type="button" variant="warning" onClick={() => setWarna('pelan-pelan')}>
                 kuning
-            </button>
-            <button type="button" onClick={() => setWarna('jalan')}>
+            </Button>
+            <Button type="button" variant="success" onClick={() => setWarna('jalan')}>
                 hijau
-            </button>
+            </Button>
             <h1>{warna}</h1>
         </Container>
+        <hr></hr>
+        <Container className="mt-3">
+        <h1>UKURAN</h1>
+            <Button type="button" onClick={() => setUkuran('fs-5')}>
+                kecil
+            </Button>
+            <Button type="button" onClick={() => setUkuran('fs-3')}>
+                sedang
+            </Button>
+            <Button type="button" onClick={() => setUkuran('fs-1')}>
+                besar
+            </Button>
+            <h1 className={ukuran}>{ukuran}</h1>
+        </Container>
+        </>
     );
 }
 
