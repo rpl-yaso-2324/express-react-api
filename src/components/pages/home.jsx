@@ -2,9 +2,10 @@ import { Card, Container, Row, Col , Button } from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 
 function Home() {
-    const [lampu1, setlampu1] = useState("Merah");
-    const [lampu2, setlampu2] = useState("kuning");
-    const [lampu3, setlampu3] = useState("hijau");
+    // const [lampu1, setlampu1] = useState("Merah");
+    // const [lampu2, setlampu2] = useState("kuning");
+    // const [lampu3, setlampu3] = useState("hijau");
+    // const [text, settext] = useState("h1");
 
     return (
         <Container className="mt-3">
@@ -19,7 +20,7 @@ function Home() {
                     </Card>
                 </Col>
             </Row>
-            <div style={{color : "red"}}>
+            {/* <div style={{color : "red"}}>
             <h1>lampu {lampu1}</h1>
       <button type="button"  onClick={() => setlampu1("Berhenti!!")} >jalankan</button>
            </div>
@@ -31,6 +32,13 @@ function Home() {
             <h1>lampu {lampu3}</h1>
       <button type="button"  onClick={() => setlampu3("Maju")} >jalankan</button>
            </div>
+           <br />
+           <div>
+            <h1>{text} h1</h1>
+      <button type="button"  onClick={() => settext("h1")} >jalankan</button>
+      <button type="button"  onClick={() => settext("h2")} >jalankan</button>
+      <button type="button"  onClick={() => settext("h3")} >jalankan</button>
+           </div> */}
         </Container>
     );
 }
