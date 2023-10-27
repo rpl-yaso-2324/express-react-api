@@ -19,7 +19,7 @@ function App () {
     </BrowserRouter>
   );
 };
-//react bootstrap itu komponen yg sudah ada tampilannya
+//react bootstrap itu komponen yg sudah ada tampilan nya
 //bootstrap itu framework css
 //hook adalah salah satu fitur dari react
 //useState itu suatu hook yang ada di react untuk menyimpan data

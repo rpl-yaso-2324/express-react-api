@@ -1,4 +1,4 @@
-//import component Bootstrap React
+//import component Bootstrap React 
 import { Card, Container, Row, Col, Button } from "react-bootstrap";
 
 function Home() {

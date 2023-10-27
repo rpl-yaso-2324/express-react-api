@@ -1,4 +1,4 @@
-//import component Bootstrap React
+//import component Bootstrap React 
 import { Card, Container, Row, Col } from "react-bootstrap";
 
 function EditPost() {
