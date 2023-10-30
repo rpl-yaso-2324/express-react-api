@@ -8,7 +8,7 @@ import axios from 'axios';
 
 function IndexPost() {
   //define state
-	const [postingan, setPostingan] = useState([]);
+	const [postingan, setPostingan] = useState([]); 
 
 	//useEffect hook
 	useEffect(() => {
