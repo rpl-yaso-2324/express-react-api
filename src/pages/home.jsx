@@ -34,10 +34,10 @@ function Home() {
         <hr></hr>
         <Container className="mt-3">
         <h1>UKURAN</h1>
-            <Button type="button" onClick={() => setUkuran('fs-5')}>
+            <Button type="button" onClick={() => setUkuran('fs-6')}>
                 kecil
             </Button>
-            <Button type="button" onClick={() => setUkuran('fs-3')}>
+            <Button type="button" variant="success" onClick={() => setUkuran('fs-3')}>
                 sedang
             </Button>
             <Button type="button" onClick={() => setUkuran('fs-1')}>
