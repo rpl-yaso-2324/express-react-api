@@ -10,7 +10,7 @@ function Home() {
                         <Card.Body className="p-4">
                         <h1>EXPRESS.JS + REACT.JS</h1>
                         <p class="lead"><strong>santri koding </strong> Still Learning</p>
-                        <Button href="" target="_blank" variant="primary" size="lg">Selengkapnya</Button>
+                        <Button href="" target="_blank" variant="primary" size="lg">Selanjutnya</Button>
                         </Card.Body>
                     </Card>
                 </Col>
