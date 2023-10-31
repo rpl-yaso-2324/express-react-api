@@ -1,15 +1,15 @@
+
 import Header from "./Header";
-import {Outlet} from "react-router-dom";
+import { Outlet } from 'react-router-dom'
 
-
-function Layout ({childern}) {
+function Layout ({children}) {
     return (
         <>
         <Header/>
-        {childern}
+        {children}
         <Outlet/>
         </>
     )
 }
 
-export default Layout;
+export default Layout
