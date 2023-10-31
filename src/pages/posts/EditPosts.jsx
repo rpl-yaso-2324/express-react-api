@@ -67,7 +67,6 @@ function EditPost() {
             //assign validation on state
             setValidation(error.response.data);
         })
-        
     };
 
     return (
