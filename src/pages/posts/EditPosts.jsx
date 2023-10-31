@@ -59,7 +59,7 @@ function EditPost() {
         .then(() => {
 
             //redirect
-            history.push('/posts');
+            window.location.replace('/posts');
         })
         .catch((error) => {
 

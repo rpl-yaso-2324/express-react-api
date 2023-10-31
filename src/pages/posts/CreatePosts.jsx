@@ -33,7 +33,7 @@ function CreatePosts() {
         .then(() => {
 
             //redirect
-            navigate.push('/api/posts');
+            window.location.replace('/posts');
 
         })
         .catch((error) => {
