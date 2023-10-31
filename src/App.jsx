@@ -9,17 +9,16 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />} />
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/pages/posts/indexPost" element={<IndexPost />} />
-            <Route path="/pages/posts/editPost" element={<EditPost />} />
-            <Route path="/pages/posts/createPost" element={<CreatePost />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+   <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+        <Route index element={<Home />}></Route>
+        <Route path="/posts" element={<IndexPost />}></Route>
+        <Route path="/posts/create" element={<CreatePost />}></Route>
+        <Route path="/posts/edit/:id" element={<EditPost />}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
