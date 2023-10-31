@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import { Card, Container, Row, Col, Button, Table } from 'react-bootstrap';
 
 //import axios
-import axios from 'axios';
+import axios from 'axios'
 
 function IndexPost() {
     return (
