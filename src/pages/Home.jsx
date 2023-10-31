@@ -2,8 +2,8 @@ import { Card, Container, Row, Col, Button } from 'react-bootstrap'
 import { useState } from 'react';
 
 function Home() {
-    const [warna1, setWarna1] = useState("Berhenti");
-    const [ukuran, setUkuran] = useState("h1");
+    const [warna1, setWarna1] = useState("Pilih Warna");
+    const [ukuran, setUkuran] = useState("Pilih Ukuran");
 
     return (
         <Container className="mt-3">

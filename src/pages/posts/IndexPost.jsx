@@ -38,10 +38,16 @@ function IndexPost() {
     const deletePost = async (id) => {
 
         //sending
-        await axios.delete(`http://localhost:3000/api/posts/delete/${id}`);
+        await axios.delete(`http://localhost:3000/api/posts/delete/${id}`)
 
         //panggil function "fetchData"
-        fectData();
+        fectData()
+
+        .then(() => {
+
+            //redirect
+            window.location.replace('/posts');
+        })
     }
 
     return (
