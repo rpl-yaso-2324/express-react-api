@@ -60,7 +60,6 @@ function EditPost() {
 
             //redirect
             history.push('/posts');
-
         })
         .catch((error) => {
 
