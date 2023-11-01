@@ -35,6 +35,21 @@ const fetchData = async () => {
 }
 console.log(posts);
 
+  //function "deletePost"
+  const deletePost = async (id) => {
+
+    //sending
+    await axios.delete(`http://localhost:3000/api/posts/delete/${id}`)
+
+    //panggil function "fetchData"
+    fectData()
+
+    .then(() => {
+
+        //redirect
+        window.location.replace('/posts');
+    })
+}
     return (
  <        Container className="mt-3">
             <Row>
@@ -59,6 +74,7 @@ console.log(posts);
                                             <td>{ post.content }</td>
                                             <td className="text-center">
                                             <Button as={Link} to={`/posts/edit/${post.id}`} variant="primary" size="sm" className="me-2">EDIT</Button>
+                                            <Button onClick={() => deletePost(post.id)} variant="danger" size="sm">DELETE</Button>
                                             </td>
                                         </tr>
                                     )) }

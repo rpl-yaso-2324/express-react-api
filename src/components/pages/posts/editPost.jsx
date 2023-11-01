@@ -8,7 +8,7 @@ import { Card, Container, Row, Col , Form, Button, Alert } from 'react-bootstrap
 import axios from 'axios';
 
 //import hook history dan params dari react router dom
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function EditPost() {
 
@@ -20,7 +20,7 @@ function EditPost() {
     const [validation, setValidation] = useState({});
 
     //history
-    const history = useHistory();
+    const history = useNavigate();
 
     //get ID from parameter URL
     const { id } = useParams();
@@ -47,19 +47,19 @@ function EditPost() {
 
     };
 
-    //function "ubahpostingan"
+    //function "updatePost"
     const ubahPostingan = async (e) => {
         e.preventDefault();
         
         //send data to server
-        await axios.patch(`http://localhost:3000/api/posts/update/${id}`, {
+        await axios.patch(`http://localhost:3000/api/posts/ubahpostingan/${id}`, {
             title: title,
             content: content
         })
         .then(() => {
 
             //redirect
-            window.location.replace('/posts');
+             History.push('/posts');
 
         })
         .catch((error) => {
@@ -72,42 +72,42 @@ function EditPost() {
 
     return (
         <Container className="mt-3">
-            <Row>
-                <Col md="{12}">
-                    <Card className="border-0 rounded shadow-sm">
-                        <Card.Body>
+        <Row>
+            <Col md="{12}">
+                <Card className="border-0 rounded shadow-sm">
+                    <Card.Body>
 
-                            {
-                                validation.errors &&
-                                    <Alert variant="danger">
-                                        <ul class="mt-0 mb-0">
-                                            { validation.errors.map((error, index) => (
-                                                <li key={index}>{ `${error.param} : ${error.msg}` }</li>
-                                            )) }
-                                        </ul>
-                                    </Alert>
-                            }
+                        {
+                            validation.errors &&
+                                <Alert variant="danger">
+                                    <ul class="mt-0 mb-0">
+                                        { validation.errors.map((error, index) => (
+                                            <li key={index}>{ `${error.param} : ${error.msg}` }</li>
+                                        )) }
+                                    </ul>
+                                </Alert>
+                        }
 
-                            <Form onSubmit={ ubahPostingan }>
-                                <Form.Group className="mb-3" controlId="formBasicEmail">
-                                    <Form.Label>TITLE</Form.Label>
-                                    <Form.Control type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Masukkan Title" />
-                                </Form.Group>
+                        <Form onSubmit={ updatePost }>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>TITLE</Form.Label>
+                                <Form.Control type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Masukkan Title" />
+                            </Form.Group>
 
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>CONTENT</Form.Label>
-                                    <Form.Control as="textarea" rows={3} value={content} onChange={(e) => setContent(e.target.value)} placeholder="Masukkan Content" />
-                                </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>CONTENT</Form.Label>
+                                <Form.Control as="textarea" rows={3} value={content} onChange={(e) => setContent(e.target.value)} placeholder="Masukkan Content" />
+                            </Form.Group>
 
-                                <Button variant="primary" type="submit">
-                                    UPDATE
-                                </Button>
-                            </Form>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-        </Container>
+                            <Button variant="primary" type="submit">
+                                UPDATE
+                            </Button>
+                        </Form>
+                    </Card.Body>
+                </Card>
+            </Col>
+        </Row>
+    </Container>
     );
 }
 
