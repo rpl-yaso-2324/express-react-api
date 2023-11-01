@@ -1,32 +1,42 @@
+//import hook useState dan useEffect from react
 import { useState, useEffect } from 'react';
+
+//import react router dom
 import { Link } from "react-router-dom";
+
+//import component Bootstrap React
 import { Card, Container, Row, Col, Button, Table } from 'react-bootstrap';
+
+//import axios
 import axios from 'axios';
 
-function IndexPosts() {
-     //define state
-     const [posts, setPosts] = useState([]);
+function IndexPost() {
 
-     //useEffect hook
-     useEffect(() => {
- 
-         //panggil method "fetchData"
-         fectData();
- 
-     }, []);
- 
-     //function "fetchData"
-     const fectData = async () => {
-         //fetching
-         const response = await axios.get('http://localhost:3000/api/posts');
-         //get response data
-         const data = await response.data.data;
- 
-         //assign response data to state "posts"
-         setPosts(data);
-     };
+    //define state
+    const [posts, setPosts] = useState([]);
 
-    return (
+    //useEffect hook
+    useEffect(() => {
+
+        //panggil method "fetchData"
+        fetchData();
+
+    }, []);
+
+    //function "fetchData"
+    const fetchData = async () => {
+        //fetching
+        const response = await axios.get('http://localhost:3000/api/postingan');
+        //get response data
+        const data = await response.data.data;
+
+        //assign response data to state "posts"
+        setPosts(data);
+    };
+console.log(posts);
+
+    return <></>
+   /* (
         <Container className="mt-3">
             <Row>
                 <Col md="{12}">
@@ -58,8 +68,7 @@ function IndexPosts() {
                 </Col>
             </Row>
         </Container>
-    );
+    ); */
 }
 
-
-export default IndexPosts;
+export default IndexPost;
