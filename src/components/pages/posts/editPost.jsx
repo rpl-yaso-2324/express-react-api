@@ -20,7 +20,7 @@ function EditPost() {
     const [validation, setValidation] = useState({});
 
     //history
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     //get ID from parameter URL
     const { id } = useParams();
@@ -59,7 +59,7 @@ function EditPost() {
         .then(() => {
 
             //redirect
-             History.push('/posts');
+             navigate.push('/posts');
 
         })
         .catch((error) => {
@@ -88,7 +88,7 @@ function EditPost() {
                                 </Alert>
                         }
 
-                        <Form onSubmit={ updatePost }>
+                        <Form onSubmit={ ubahPostingan }>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>TITLE</Form.Label>
                                 <Form.Control type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Masukkan Title" />
