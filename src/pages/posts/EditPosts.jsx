@@ -20,7 +20,7 @@ function EditPost() {
     const [validation, setValidation] = useState({});
 
     //history
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     //get ID from parameter URL
     const { id } = useParams();
@@ -59,7 +59,7 @@ function EditPost() {
         .then(() => {
 
             //redirect
-            window.location.replace('/posts');
+            navigate('/posts');
         })
         .catch((error) => {
 
