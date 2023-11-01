@@ -32,8 +32,19 @@ function IndexPost() {
 
         //assign response data to state "posts"
         setPostingan(data);
-    }
-    console.log(postingan);
+    };
+    const deletePost = async (id) => {
+        console.log('Delete Post yang ID:', id);
+        const url = `http://localhost:3000/api/postingan/deletePostingan/${id}`;
+        console.log('URL:', url);
+        try {
+            await axios.delete(url);
+            fectData();
+        } catch (error) {
+            console.error("Error deleting post:", error);
+        }
+    };
+    
 
     return (
         <Container className="mt-3">
@@ -57,7 +68,9 @@ function IndexPost() {
                                             <td>{ index + 1 }</td>
                                             <td>{ post.title }</td>
                                             <td>{ post.content }</td>
-                                            <td className="text-center"></td>
+                                            <td className="text-center"><Button as={Link} to={`/posts/edit/${post.id}`} variant="primary" size="sm" className="me-2">UBAHLAH!</Button>
+                                            <Button onClick={() => deletePost(post.id)} variant="danger" size="sm">HAPUSLAH!</Button>
+                                            </td>
                                         </tr>
                                     )) }
                                 </tbody>
