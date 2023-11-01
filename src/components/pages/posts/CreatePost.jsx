@@ -1,5 +1,9 @@
+
+
 //import component Bootstrap React
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Card, Container, Row, Col , Form, Button, Alert } from 'react-bootstrap';
+
+
 
 function CreatePost() {
 	return (
