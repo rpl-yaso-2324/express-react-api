@@ -1,15 +1,14 @@
-import { BrowserRouter, Routes, Route} from"react-router-dom";
-import Layout from "./components/layouts/layout";
+import { Outlet } from "react-router-dom";
+import Header from "./Header";
 
-function App() {
-  return (
-  <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+function Layout({ children }) {
+    return (
+        <>
+        <Header />
+        {children}
+        <Outlet />
+        </>
+    );
 }
 
-export default App;
+export default Layout;
