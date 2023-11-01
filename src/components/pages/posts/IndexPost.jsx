@@ -39,8 +39,8 @@ const deletePost = async (id) => {
     //sending
     await axios.delete(`http://localhost:3000/api/postingan/delete/${id}`);
 
-    //panggil function "fetchData"
-    fectData();
+    //memanggil function "fetchData"
+    fecthData();
 }
 
     return (
@@ -60,17 +60,17 @@ const deletePost = async (id) => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                { posts.map((post, index) => (
-    <tr key={ post.id }>
-        <td>{ index + 1 }</td>
-        <td>{ post.title }</td>
-        <td>{ post.content }</td>
-        <td className="text-center">
-        	<Button as={Link} to={`/posts/edit/${post.id}`} variant="primary" size="sm" className="me-2">EDIT</Button>
-        	<Button onClick={() => deletePost(post.id)} variant="danger" size="sm">DELETE</Button>
-        </td>
-    </tr>
-)) }
+                                 { posts.map((post, index) => (
+                                  <tr key={ post.id }>
+                                    <td>{ index + 1 }</td>
+                                    <td>{ post.title }</td>
+                                    <td>{ post.content }</td>
+                                    <td className="text-center">
+                                        <Button as={Link} to={`/posts/edit/${post.id}`} variant="primary" size="sm" className="me-2">EDIT</Button>
+                                        <Button onClick={() => deletePost(post.id)} variant="danger" size="sm">DELETE</Button>
+                                    </td>
+                                  </tr>
+                                    )) }
                                 </tbody>
                             </Table>
                         </Card.Body>
