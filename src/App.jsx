@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./component/layouts/Layout";
 import Home from "./component/posts/Home";
+import IndexPost from "./component/posts/pages/IndexPost";
 import CreatePost from "./component/posts/pages/CreatePost";
 import EditPost from "./component/posts/pages/EditPost";
-import IndexPost from "./component/posts/pages/IndexPost";
-import Layout from "./component/layouts/Layout";
-
 function App() {
 	return (
 		<BrowserRouter>
@@ -19,4 +18,5 @@ function App() {
 		</BrowserRouter>
 	);
 }
+
 export default App;
