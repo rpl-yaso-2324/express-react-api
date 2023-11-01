@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/layouts/layout";
 import Home from "./components/pages/Home";
 import IndexPost from "./components/pages/posts/IndexPost";
 import CreatePost from "./components/pages/posts/CreatePost";
 import EditPost from "./components/pages/posts/EditPost";
+import Layout from "./components/layouts/layout";
 
 function App() {
 	return (
