@@ -23,4 +23,6 @@ function App () {
 //bootstrap itu framework css
 //hook adalah salah satu fitur dari react
 //useState itu suatu hook yang ada di react untuk menyimpan data
+//use history supaya bisa kembali kehalaman sebelumnya
+//axios adalah pilihan yang digunakan dalam React untuk melakukan permintaan HTTP
 export default App;

@@ -42,6 +42,7 @@ const deletePost = async (id) => {
     //memanggil function "fetchData"
     fecthData();
 }
+console.log (posts);
 
     return (
         <Container className="mt-3">
@@ -49,7 +50,7 @@ const deletePost = async (id) => {
                 <Col md="{12}">
                     <Card className="border-0 rounded shadow-sm">
                         <Card.Body>
-                            <Button as={Link} to="/posts/create" variant="success" className="mb-3">TAMBAH POST</Button>
+                            <Button as={Link} to="/posts/create" variant="success" className="mb-3">TAMBAH POSTINGAN</Button>
                             <Table striped bordered hover className="mb-1">
                                 <thead>
                                     <tr>

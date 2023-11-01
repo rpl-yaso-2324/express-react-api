@@ -20,7 +20,7 @@ function EditPost() {
     const [validation, setValidation] = useState({});
 
     //Navigate
-    const Navigate = useNavigate();
+    const history = useNavigate();
 
     //get ID from parameter URL
     const { id } = useParams();
@@ -37,7 +37,7 @@ function EditPost() {
     const getPostById = async() => {
 
         //get data from server
-        const response = await axios.get(`http://localhost:3000/api/posts/${id}`);
+        const response = await axios.get(`http://localhost:3000/api/postingan/${id}`);
         //get response data
         const data = await response.data.data
 
@@ -52,14 +52,14 @@ function EditPost() {
         e.preventDefault();
         
         //send data to server
-        await axios.patch(`http://localhost:3000/api/posts/update/${id}`, {
+        await axios.patch(`http://localhost:3000/api/postingan/updatePostingan/${id}`, {
             title: title,
             content: content
         })
         .then(() => {
 
             //redirect
-            Navigate.push('/posts');
+            history.push('/posts');
 
         })
         .catch((error) => {
