@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 function Header() {
     return (
-        <div>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand to="/">EXPRESS.JS + REACT.JS</Navbar.Brand>
@@ -16,7 +15,6 @@ function Header() {
             </Navbar.Collapse>
         </Container>
       </Navbar>
-      </div>
         )
 }
 

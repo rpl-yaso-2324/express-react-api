@@ -1,18 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from './layout/Layout';
-
+import Layout from "./component/layouts/Layout";
+import Home from "./component/posts/Home";
+import IndexPost from "./component/posts/pages/IndexPost";
+import CreatePost from "./component/posts/pages/CreatePost";
+import EditPost from "./component/posts/pages/EditPost";
 function App() {
-
-  return (
-    <>
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-      </>
-  )
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Layout />}>
+					<Route index element={<Home />} />
+					<Route path="/posts" element={<IndexPost />} />
+					<Route path="/posts/create" element={<CreatePost />} />
+					<Route path="/posts/edit/:id" element={<EditPost />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
+	);
 }
 
-export default App
+export default App;
