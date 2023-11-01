@@ -18,7 +18,7 @@ function IndexPost() {
     //useEffect hook
     useEffect(() => {
 
-        //panggil method "fetchData"
+        //panggil method "fetchData, atau fectData"
         fectData();
 
     }, []);
