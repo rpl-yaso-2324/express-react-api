@@ -22,7 +22,7 @@ function createPost() {
    const navigate = useNavigate();
 
    //method "buatPostingan"
-   const buatPostingan = async (e) => {
+   const tambahPostingan = async (e) => {
        e.preventDefault();
 
        //send data to server
@@ -62,7 +62,7 @@ function createPost() {
                                     </Alert>
                             }
 
-                            <Form onSubmit={ buatPostingan }>
+                            <Form onSubmit={ tambahPostingan }>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>TITLE</Form.Label>
                                     <Form.Control type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Masukkan Title" />

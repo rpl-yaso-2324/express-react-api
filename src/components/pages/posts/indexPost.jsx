@@ -14,16 +14,17 @@ function indexPosts () {
 //define state
 const [posts, setPosts] = useState([]);
 
+console.log(posts);
 //useEffect hook
 useEffect(() => {
 
     //panggil method "fetchData"
-    fectData();
+    fetchData();
 
 }, []);
 
 //function "fetchData"
-const fectData = async () => {
+const fetchData = async () => {
     //fetching
     const response = await axios.get('http://localhost:3000/api/posts');
     //get response data
@@ -32,9 +33,10 @@ const fectData = async () => {
     //assign response data to state "posts"
     setPosts(data);
 }
+console.log(posts);
 
-    return(
-        <Container className="mt-3">
+    return (
+ <        Container className="mt-3">
             <Row>
                 <Col md="{12}">
                     <Card className="border-0 rounded shadow-sm">
@@ -55,7 +57,9 @@ const fectData = async () => {
                                             <td>{ index + 1 }</td>
                                             <td>{ post.title }</td>
                                             <td>{ post.content }</td>
-                                            <td className="text-center"></td>
+                                            <td className="text-center">
+                                            <Button as={Link} to={`/posts/edit/${post.id}`} variant="primary" size="sm" className="me-2">EDIT</Button>
+                                            </td>
                                         </tr>
                                     )) }
                                 </tbody>
