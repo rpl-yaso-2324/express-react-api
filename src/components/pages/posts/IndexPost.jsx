@@ -10,7 +10,7 @@ import { Card, Container, Row, Col, Button, Table } from 'react-bootstrap';
 //import axios
 import axios from 'axios';
 
-function PostIndex() {
+function IndexPost() {
 
     //define state
     const [postingan, setPostingan] = useState([]);
@@ -33,6 +33,7 @@ function PostIndex() {
         //assign response data to state "posts"
         setPostingan(data);
     }
+    console.log(postingan);
 
     return (
         <Container className="mt-3">
@@ -51,7 +52,7 @@ function PostIndex() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    { posts.map((post, index) => (
+                                    { postingan.map((post, index) => (
                                         <tr key={ post.id }>
                                             <td>{ index + 1 }</td>
                                             <td>{ post.title }</td>
@@ -69,4 +70,4 @@ function PostIndex() {
     );
 }
 
-export default PostIndex;
+export default IndexPost;
