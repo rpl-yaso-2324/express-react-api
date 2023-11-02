@@ -18,7 +18,7 @@ function IndexPosts() {
      //function "fetchData"
      const fectData = async () => {
          //fetching
-         const response = await axios.get('http://localhost:3000/api/posts');
+         const response = await axios.get('http://localhost:3000/api/postingan');
          //get response data
          const data = await response.data.data;
  
