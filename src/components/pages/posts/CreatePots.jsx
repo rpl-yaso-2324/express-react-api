@@ -37,7 +37,7 @@ function CreatePost() {
         })
         .then(() => {
 
-            //redirect
+            //redirectr
             history.push("/posts");
 
         })
