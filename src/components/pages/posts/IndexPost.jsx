@@ -18,7 +18,7 @@ function IndexPost() {
 		//fetching
 		const response = await axios.get("http://localhost:3000/api/postingan");
 		//get response data
-		const dataPostingan = await response.data.postingan;
+		const dataPostingaan = await response.data.postingan;
 
 		//assign response data to state "posts"
 		setPostingan(dataPostingan);
