@@ -22,6 +22,7 @@ function IndexPost() {
         const data = await response.data.data;
         //assign response data to state "posts"
         setPosts(data);
+
     }
         console.log(posts);
 
@@ -37,7 +38,7 @@ function IndexPost() {
                         variant="success"
                         className="mb-3"
                       >
-                        TAMBAH POST
+                        TAMBAH POSTINGAN
                       </Button>
                       <Table striped bordered hover className="mb-1">
                         <thead>
@@ -49,12 +50,29 @@ function IndexPost() {
                           </tr>
                         </thead>
                         <tbody>
-                          {posts.map((posts, index) => (
-                            <tr key={posts.id}>
+                          {posts.map((post, index) => (
+                            <tr key={post.id}>
                               <td>{index + 1}</td>
-                              <td>{posts.title}</td>
-                              <td>{posts.content}</td>
-                              <td className="text-center"></td>
+                              <td>{post.title}</td>
+                              <td>{post.content}</td>
+                              <td className="text-center">
+                                <Button 
+                                as={Link} 
+                                to={`/posts/EditPosts/${post.id}`} 
+                                variant="primary" 
+                                size="sm"
+                                className="me-2"
+                                >
+                                  EDIT
+                                </Button>
+                                <Button 
+                                onClick={() => deletePost(post.id)}
+                                 variant="danger"
+                                  size="sm"
+                                  >
+                                    DELETE
+                                </Button>
+                              </td>
                             </tr>
                           ))}
                         </tbody>
