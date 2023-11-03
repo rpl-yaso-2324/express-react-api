@@ -57,6 +57,8 @@ function IndexPost() {
                                          <td>{ post.title }</td>
                                          <td>{ post.content }</td>
                                          <td className="text-center"></td>
+
+                                         <Button as={Link} to={`/posts/edit/${post.id}`} variant="primary" size="sm" className="me-2">EDIT</Button>
                                      </tr>
                                  )) }
                              </tbody>
