@@ -1,19 +1,27 @@
-import { Card, Container, Row, Col } from 'react-bootstrap'
+//import component Bootstrap React
+import { Card, Container, Row, Col } from "react-bootstrap";
+//import hook useState dan useEffect from react
+import { useState, useEffect } from 'react';
+import { useHistory, useParams } from "react-router-dom";
+//import component Bootstrap React
+import { Card, Container, Row, Col , Form, Button, Alert } from 'react-bootstrap';
+//import axios
+import axios from 'axios';
 
-function EditPosts() {
-    return (
-        <Container className="mt-3">
-            <Row>
-                <Col md="{12}">
-                    <Card className="border-0 rounded shadow-sm">
-                        <Card.Body>
-                            HALAMAN EDIT POST
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-        </Container>
-    );
+function EditPost() {
+	return (
+		<Container className="mt-3">
+			<Row>
+				<Col md="{12}">
+					<Card className="border-0 rounded shadow-sm">
+						<Card.Body>Halaman edit post</Card.Body>
+					</Card>
+				</Col>
+			</Row>
+		</Container>
+
+		
+	);
 }
 
-export default EditPosts;
+export default EditPost;
