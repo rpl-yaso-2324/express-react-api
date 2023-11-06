@@ -10,7 +10,7 @@ import { Card, Container, Row, Col, Button, Table } from 'react-bootstrap';
 //import axios
 import axios from 'axios';
 
-function IndexPost() {
+function PostIndex() {
 
     //define state
     const [posts, setPosts] = useState([]);
@@ -26,13 +26,23 @@ function IndexPost() {
     //function "fetchData"
     const fetchData = async () => {
         //fetching
-        const response = await axios.get('http://localhost:3000/api/posts');
+        const response = await axios.get('http://localhost:2000/api/posts');
         //get response data
         const data = await response.data.data;
 
         //assign response data to state "posts"
         setPosts(data);
     }
+
+    //function "deletePost"
+const deletePost = async (id) => {
+
+    //sending
+    await axios.delete(`http://localhost:2000/api/posts/deletePostingan/${id}`);
+
+    //panggil function "fetchData"
+    fectData();
+}
 
     return (
         <Container className="mt-3">
@@ -51,14 +61,17 @@ function IndexPost() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    { posts.map((post, index) => (
-                                        <tr key={ post.id }>
-                                            <td>{ index + 1 }</td>
-                                            <td>{ post.title }</td>
-                                            <td>{ post.content }</td>
-                                            <td className="text-center"></td>
-                                        </tr>
-                                    )) }
+                                { posts.map((post, index) => (
+                                 <tr key={ post.id }>
+                                 <td>{ index + 1 }</td>
+                                 <td>{ post.title }</td>
+                                 <td>{ post.content }</td>
+                                 <td className="text-center">
+        	             <Button as={Link} to={`/posts/edit/${post.id}`} variant="primary" size="sm" className="me-2">EDIT</Button>
+        	             <Button onClick={() => deletePost(post.id)} variant="danger" size="sm">DELETE</Button>
+                                 </td>
+                                 </tr>
+                              )) }
                                 </tbody>
                             </Table>
                         </Card.Body>
@@ -69,4 +82,4 @@ function IndexPost() {
     );
 }
 
-export default IndexPost;
+export default PostIndex;
