@@ -52,7 +52,7 @@ function EditPost() {
         e.preventDefault();
         
         //send data to server
-        await axios.patch(`http://localhost:3000/api/posts/updatePostingan/${id}`, {
+        await axios.patch(`http://localhost:3000/api/postingan/updatePostingan/${id}`, {
             title: title,
             content: content
         })
@@ -88,7 +88,7 @@ function EditPost() {
                                     </Alert>
                             }
 
-                            <Form onSubmit={ updatePostingan }>
+                            <Form onSubmit={ updatePost }>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>TITLE</Form.Label>
                                     <Form.Control type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Masukkan Title" />
