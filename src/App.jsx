@@ -6,7 +6,7 @@ import CreatePost from "./components/pages/posts/CreatePost";
 import EditPost from "./components/pages/posts/EditPost";
 
 function App() {
-	return (
+	return (            
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Layout />}>
