@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layouts/layout";
 import Home from "./components/pages/home";
 import IndexPosts from "./components/pages/posts/indexPost";
+import EditPost from "./components/pages/posts/editPost";
 import CreatePosts from "./components/pages/posts/createPost";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <Route index element={<Home />}></Route>
         <Route path="/posts" element={<IndexPosts />}></Route>
         <Route path="/posts/create" element={<CreatePosts />}></Route>
-        <Route path="/posts/edit/:id" element={<editPost />}></Route>
+        <Route path="/posts/edit/:id" element={<EditPost />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
