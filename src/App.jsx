@@ -12,10 +12,10 @@ function App() {
    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-        <Route index element={<Home />}></Route>
-        <Route path="/posts" element={<IndexPost />}></Route>
-        <Route path="/posts/create" element={<CreatePost />}></Route>
-        <Route path="/posts/edit/:id" element={<EditPost />}></Route>
+        <Route index element={<Home />}/>
+        <Route path="/posts" element={<IndexPost />}/>
+        <Route path="/posts/create" element={<CreatePost />}/>
+        <Route path="/posts/edit/:id" element={<EditPost />}/>
         </Route>
       </Routes>
     </BrowserRouter>
