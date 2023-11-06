@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 //import component Bootstrap React
-import { Card, Container, Row, Col , Form, Button, Alert } from 'react-bootstrap';
+import { Card, Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 
 //import axios
 import axios from "axios";
@@ -12,19 +12,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function CreatePost() {
-	return (
-		<Container className="mt-3">
-			<Row>
-				<Col md="{12}">
-					<Card className="border-0 rounded shadow-sm">
-						<Card.Body>HALAMAN CREATE POST</Card.Body>
-					</Card>
-				</Col>
-			</Row>
-		</Container>
-	);
+
   //state
-  const [tittle, setTitle] = useState("");
+  const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
   //state validation
@@ -37,13 +27,13 @@ function CreatePost() {
   const storePost = async (event) => {
     event.preventDefault();
 
-    console.log(tittle);
+    console.log(title);
     console.log(content);
 
     //send data to server
     await axios
       .post("http://localhost:3000/posts/tambahData", {
-        title: tittle,
+        tittle: title,
         content: content,
       })
       .then(() => {
@@ -64,7 +54,7 @@ function CreatePost() {
             <Card.Body>
               {validation.errors && (
                 <Alert variant="danger">
-                  <ul class="mt-0 mb-0">
+                  <ul className="mt-0 mb-0">
                     {validation.errors.map((error, index) => (
                       <li key={index}>{`${error.param} : ${error.msg}`}</li>
                     ))}
@@ -77,7 +67,7 @@ function CreatePost() {
                   <Form.Label>TITLE</Form.Label>
                   <Form.Control
                     type="text"
-                    value={tittle}
+                    value={title}
                     onChange={(event) => setTitle(event.target.value)}
                     placeholder="Masukkan Title"
                   />

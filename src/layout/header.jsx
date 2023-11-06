@@ -10,12 +10,8 @@ function Header(params) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink>
-              <Link as={Link} to="/" className="nav-link">HOME</Link>
-            </NavLink>
-            <NavLink>
-              <Link as={Link} to="/posts" className="nav-link">POSTS</Link>
-            </NavLink>
+            <Link as={Link} to="/" className="nav-link">HOME</Link>
+            <Link as={Link} to="/posts" className="nav-link">POSTS</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

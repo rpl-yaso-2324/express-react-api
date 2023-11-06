@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 //import component Bootstrap React
-import { Card, Container, Row, Col , Form, Button, Alert } from 'react-bootstrap';
+import { Card, Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 
 //import axios
 import axios from 'axios';
@@ -11,18 +11,6 @@ import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
 
 function EditPost() {
-	return (
-		<Container className="mt-3">
-			<Row>
-				<Col md="{12}">
-					<Card className="border-0 rounded shadow-sm">
-						<Card.Body>HALAMAN EDIT POST</Card.Body>
-					</Card>
-				</Col>
-			</Row>
-		</Container>
-	);
-
     //state
     const [tittle, setTitle] = useState('');
     const [content, setContent] = useState('');
@@ -45,7 +33,7 @@ function EditPost() {
     }, []);
 
     //function "getPostById"
-    const getPostById = async() => {
+    const getPostById = async () => {
 
         //get data from server
         const response = await axios.get(`http://localhost:3000/posts/${id}`);
@@ -64,20 +52,20 @@ function EditPost() {
 
         //send data to server
         await axios.patch(`http://localhost:3000/posts/updatePostingan/${id}`, {
-            title: tittle,
+            tittle: tittle,
             content: content
         })
-        .then(() => {
+            .then(() => {
 
-            //redirect
-            history.push('/posts');
+                //redirect
+                history.push('/posts');
 
-        })
-        .catch((error) => {
+            })
+            .catch((error) => {
 
-            //assign validation on state
-            setValidation(error.response.data);
-        })
+                //assign validation on state
+                setValidation(error.response.data);
+            })
 
     };
 
@@ -90,19 +78,19 @@ function EditPost() {
 
                             {
                                 validation.errors &&
-                                    <Alert variant="danger">
-                                        <ul class="mt-0 mb-0">
-                                            { validation.errors.map((error, index) => (
-                                                <li key={index}>{ `${error.param} : ${error.msg}` }</li>
-                                            )) }
-                                        </ul>
-                                    </Alert>
+                                <Alert variant="danger">
+                                    <ul class="mt-0 mb-0">
+                                        {validation.errors.map((error, index) => (
+                                            <li key={index}>{`${error.param} : ${error.msg}`}</li>
+                                        ))}
+                                    </ul>
+                                </Alert>
                             }
 
-                            <Form onSubmit={ updatePost }>
+                            <Form onSubmit={updatePost}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>TITLE</Form.Label>
-                                    <Form.Control type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Masukkan Title" />
+                                    <Form.Control type="text" value={tittle} onChange={(e) => setTitle(e.target.value)} placeholder="Masukkan Title" />
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -111,7 +99,7 @@ function EditPost() {
                                 </Form.Group>
 
                                 <Button variant="primary" type="submit">
-                                    UPDATE
+                                    CHANGE
                                 </Button>
                             </Form>
                         </Card.Body>
