@@ -1,12 +1,7 @@
 //import component Bootstrap React
 import { Card, Container, Row, Col } from "react-bootstrap";
-//import hook useState dan useEffect from react
-import { useState, useEffect } from 'react';
-import { useHistory, useParams } from "react-router-dom";
-//import component Bootstrap React
-import { Card, Container, Row, Col , Form, Button, Alert } from 'react-bootstrap';
-//import axios
-import axios from 'axios';
+
+
 
 function EditPost() {
 	return (
