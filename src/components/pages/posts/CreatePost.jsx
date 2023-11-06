@@ -38,7 +38,7 @@ function CreatePost() {
 
     //send data to server
     await axios
-      .post("http://localhost:3000/api/postingan/tambahPostingan", {
+      .post("http://localhost:3000/api/posts/tambahPostingan", {
         title: title,
         content: content,
       })
