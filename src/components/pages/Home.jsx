@@ -10,7 +10,7 @@ function Home() {
 						<Card.Body className="p-4">
 							<h1>EXPRESS.JS + REACT.JS</h1>
 							<p className="lead">
-								Tutorial FullStack Express.js dan React.js oleh{" "}
+								Tutorial FullStack Express.js dan React.js Oleh{" "}
 								<strong>SantriKoding.com</strong>
 							</p>
 							<Button
