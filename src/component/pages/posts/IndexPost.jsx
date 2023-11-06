@@ -24,6 +24,16 @@ function IndexPost() {
         setPosts(data);
 
     }
+
+    //function "deletePost"
+const deletePost = async (id) => {
+
+  //sending
+  await axios.delete(`http://localhost:3000/api/postingan/deletePostingan/${id}`);
+
+  //panggil function "fetchData"
+  fectData();
+}
         console.log(posts);
 
         return (
