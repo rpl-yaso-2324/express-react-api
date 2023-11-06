@@ -9,26 +9,13 @@ function Header() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link>
+                        
                             <Link to="/" className="nav-link">
                                 HOME
                             </Link>
-                        </Nav.Link>
-                        <Nav.Link>
                             <Link to="/posts" className="nav-link">
                                 POSTS
                             </Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link to="/posts/create" className="nav-link">
-                                CREATE
-                            </Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link to="/posts/edit/:id" className="nav-link">
-                                EDIT
-                            </Link>
-                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
