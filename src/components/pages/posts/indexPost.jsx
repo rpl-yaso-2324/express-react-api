@@ -47,7 +47,7 @@ console.log(posts);
     .then(() => {
 
         //redirect
-        window.location.replace('/posts');
+        navigate('/posts');
     })
 }
     return (
