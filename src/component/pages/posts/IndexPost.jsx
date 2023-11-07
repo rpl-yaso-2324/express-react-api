@@ -26,6 +26,16 @@ function IndexPosts() {
          setPosts(data);
      };
 
+     //function "deletePost"
+const deletePost = async (id) => {
+
+    //sending
+    await axios.delete(`http://localhost:2000/api/postingan/deletePostingan/${id}`);
+
+    //panggil function "fetchData"
+    fectData();
+}
+
     return (
         <Container className="mt-3">
             <Row>
@@ -50,6 +60,7 @@ function IndexPosts() {
                                             <td>{ post.content }</td>
                                             <td className="text-center">
                                             <Button as={Link} to={`/posts/edit/${post.id}`} variant="primary" size="sm" className="me-2">EDIT</Button>
+                                            <Button onClick={() => deletePost(post.id)} variant="danger" size="sm">DELETE</Button>
                                             </td>
                                         </tr>
                                     )) }
