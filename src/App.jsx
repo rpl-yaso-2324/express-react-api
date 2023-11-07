@@ -14,9 +14,9 @@ function App() {
           <Route path="/" element={<Layout />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/pages/posts/indexPost" element={<IndexPost />} />
-            <Route path="/pages/posts/editPost" element={<EditPost />} />
-            <Route path="/pages/posts/createPost" element={<CreatePost />} />
+            <Route path="/posts" element={<IndexPost />} />
+            <Route path="/posts/edit/:id" element={<EditPost />} />
+            <Route path="/posts/create" element={<CreatePost />} />
           </Route>
         </Routes>
       </BrowserRouter>
