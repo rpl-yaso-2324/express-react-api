@@ -58,7 +58,7 @@ function EditPost() {
             .then(() => {
 
                 //redirect
-                history.push('/posts');
+                history('/posts');
 
             })
             .catch((error) => {
