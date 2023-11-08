@@ -12,10 +12,6 @@ import axios from 'axios';
 
 function IndexPost() {
 
-    let headers = new Headers();
-    headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
-    headers.append('Access-Control-Allow-Credentials', 'true');
-
     //define state
     const [postingan, setPostingan] = useState([]);
 
