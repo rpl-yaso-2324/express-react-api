@@ -9,16 +9,15 @@ import { Link } from "react-router-dom";
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                <Nav.Link>
-							<Link to="/" className="nav-link">
+              
+						  	<Link to="/" className="nav-link">
 								HOME
-							</Link>
-						</Nav.Link>
-						<Nav.Link>
-							<Link to="/posts" className="nav-link">
+							 </Link>
+				
+						  	<Link to="/posts" className="nav-link">
 								POSTS
-							</Link>
-						</Nav.Link>
+						  	</Link>
+					
                 
                 </Nav>
             </Navbar.Collapse>
