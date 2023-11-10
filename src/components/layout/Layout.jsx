@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom"; 
 import Header from "./header";
 
 function Layout({ children }) {
@@ -6,7 +6,7 @@ function Layout({ children }) {
 		<>
 			<Header />
 			{children}
-			<Outlet />
+			<Outlet /> {/* outlet itu di import dari react-router-dom */}
 		</>
 	);
 }

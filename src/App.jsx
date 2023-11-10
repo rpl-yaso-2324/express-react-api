@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/layout/Layout";
+import Layout from "./components/layout/layout";
 import Home from "./components/pages/home";
 import IndexPost from "./components/pages/posts/IndexPost";
 import CreatePost from "./components/pages/posts/CreatePost";
@@ -25,4 +25,5 @@ function App () {
 //useState itu suatu hook yang ada di react untuk menyimpan data
 //use history supaya bisa kembali kehalaman sebelumnya
 //axios adalah pilihan yang digunakan dalam React untuk melakukan permintaan HTTP
+//function itu kode blok yang dilakukan untuk memanggil tugas
 export default App;

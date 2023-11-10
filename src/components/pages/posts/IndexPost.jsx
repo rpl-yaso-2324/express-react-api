@@ -1,7 +1,7 @@
-//import hook useState dan useEffect from react
+//import 2 hook useState(untuk meyimpan data) dan useEffect( untuk mengatur efek samping dalam komponen fungsional) from react
 import { useState, useEffect } from 'react';
 
-//import react router dom
+//import react router dom, agar bisa membuat tautan link yang mengarahkan pada rute lain
 import { Link } from "react-router-dom";
 
 //import component Bootstrap React
@@ -83,3 +83,6 @@ console.log (posts);
 }
 
 export default IndexPost;
+//untuk menginstall react di cmd "npm install create-react-app" dengan syarat harus ada create-react-app nya
+//bisa juga dengan "npx create-react-app nama_folder"
+// disini kita menggunakan "npm create vite@latest"

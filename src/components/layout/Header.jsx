@@ -9,7 +9,7 @@ function Header(params) {
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="me-auto">
-							<Link to="/" className="nav-link">
+							<Link to="/" className="nav-link">{/*  jika di tutorial menggunakan nav.link disini kita menggunakan link */}
 								HOME
 							</Link>
 							<Link to="/posts" className="nav-link">
