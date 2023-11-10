@@ -1,16 +1,10 @@
+/* Bagian 1 (fhany) */
+
 //import hook useState from react
 import { useState } from "react";
 
 //import component Bootstrap React
-import {
-  Card,
-  Container,
-  Row,
-  Col,
-  Form,
-  Button,
-  Alert,
-} from "react-bootstrap";
+import { Card, Container, Row, Col, Form, Button, Alert, } from "react-bootstrap";
 
 //import axios
 import axios from "axios";
@@ -29,20 +23,23 @@ function CreatePost() {
   //navigate
   const navigate = useNavigate();
 
-  //method "storePost"
-  const storePost = async (event) => {
-    event.preventDefault();
+  /* Bagian 2 (nazwa) */
 
-    console.log(title);
+  //method "storePost"
+  const storePost  /* storePost itu function */  = async (event) => {      /* ini menjalankan.. */
+                                              /* =>(method), async untuk mendeklarasikan storePost sebagai fungsi asinkron */
+     event.preventDefault();   /* menjalankan ini */
+
+    console.log(title);     /* mengambil value nya  */
     console.log(content);
 
     //send data to server
-    await axios
-      .post("http://localhost:3000/api/postingan/tambahPostingan", {
+    await axios   /* await itu fungsi untuk menunggu operasi asinkron selesai */
+      .post("http://localhost:3000/api/postingan/tambahPostingan", {       /* jika post nya berhasil maka.. */
         title: title,
         content: content,
       })
-      .then(() => {
+      .then(() => {            /* akan menjalankan ini */
         //redirect
         navigate("/posts");
       })
@@ -51,6 +48,8 @@ function CreatePost() {
         setValidation(error.response.data);
       });
   };
+
+/* Bagian 3 (sancan) */
 
   return (
     <Container className="mt-3">
@@ -68,6 +67,8 @@ function CreatePost() {
                 </Alert>
               )}
 
+                 {/* Bagian 4 (zasxya) */}
+
               <Form onSubmit={storePost}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>TITLE</Form.Label>
@@ -76,10 +77,9 @@ function CreatePost() {
                     value={title}
                     onChange={(event) => setTitle(event.target.value)}
                     placeholder="Masukkan Title"
-                  />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                   />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>CONTENT</Form.Label>
                   <Form.Control
                     as="textarea"
@@ -87,8 +87,8 @@ function CreatePost() {
                     value={content}
                     onChange={(event) => setContent(event.target.value)}
                     placeholder="Masukkan Content"
-                  />
-                </Form.Group>
+                   />
+                  </Form.Group>
 
                 <Button variant="primary" type="submit">
                   SIMPAN

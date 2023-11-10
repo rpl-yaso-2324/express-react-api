@@ -67,7 +67,7 @@ const deletePost = async (id) => {
                 </thead>
                 <tbody>
                   {postingan.map((post, index) => (
-                    <tr key={post.id}>
+                    <tr key={post.id}>  
                       <td>{index + 1}</td>
                       <td>{post.title}</td>
                       <td>{post.content}</td>
@@ -89,6 +89,8 @@ const deletePost = async (id) => {
 }
 
 export default IndexPost;
+
+//td (tabel data) tr (tabel row)
 
 		// <Container className="mt-3">
 		// 	<Row md={6}>

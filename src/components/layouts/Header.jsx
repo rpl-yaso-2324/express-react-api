@@ -10,7 +10,7 @@ function Header(params) {
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="me-auto">
 						
-					<Link to="/" className="nav-link">
+				          	<Link to="/" className="nav-link">
                        HOME
                     </Link>
 
