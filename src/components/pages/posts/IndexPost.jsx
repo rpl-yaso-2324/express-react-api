@@ -29,7 +29,16 @@ function IndexPost() {
     //assign response data to state "posts"
     setPostingan(dataPostingan);
   };
-  console.log(postingan);
+
+  const deletePost = async (id) => {
+    //sending
+    await axios.delete(
+      `http://localhost:3000/api/postingan/deletePostingan/${id}`
+    );
+
+    //panggil function "fetchData"
+    fetchData();
+  };
 
   return (
     <Container className="mt-3">
@@ -47,7 +56,7 @@ function IndexPost() {
               </Button>
               <Table striped bordered hover className="mb-1">
                 <thead>
-                  <tr>
+                  <tr className="text-center">
                     <th>NO.</th>
                     <th>TITLE</th>
                     <th>CONTENT</th>
@@ -60,7 +69,24 @@ function IndexPost() {
                       <td>{index + 1}</td>
                       <td>{post.title}</td>
                       <td>{post.content}</td>
-                      <td className="text-center"></td>
+                      <td className="text-center col-2">
+                        <Button
+                          as={Link}
+                          to={`/posts/edit/${post.id}`}
+                          variant="primary"
+                          size="sm"
+                          className="me-2"
+                        >
+                          EDIT
+                        </Button>
+                        <Button
+                          onClick={() => deletePost(post.id)}
+                          variant="danger"
+                          size="sm"
+                        >
+                          DELETE
+                        </Button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
