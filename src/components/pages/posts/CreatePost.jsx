@@ -17,15 +17,15 @@ function CreatePost() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
-  //state validation
-  const [validation, setValidation] = useState({});
+  //state validation 
+  const [validation, setValidation] = useState({});      /* yg ini */
 
   //navigate
   const navigate = useNavigate();
 
   /* Bagian 2 (nazwa) */
 
-  //method "storePost"
+  // bagian method "storePost"
   const storePost  /* storePost itu function */  = async (event) => {      /* ini menjalankan.. */
                                               /* =>(method), async untuk mendeklarasikan storePost sebagai fungsi asinkron */
      event.preventDefault();   /* menjalankan ini */
@@ -36,16 +36,16 @@ function CreatePost() {
     //send data to server
     await axios   /* await itu fungsi untuk menunggu operasi asinkron selesai */
       .post("http://localhost:3000/api/postingan/tambahPostingan", {       /* jika post nya berhasil maka.. */
-        title: title,
-        content: content,
+        title: title,          
+        content: content,         /* value nya ini */
       })
-      .then(() => {            /* akan menjalankan ini */
-        //redirect
-        navigate("/posts");
+      .then(() => {            
+        //redirect                /* akan menjalankan ini */
+        navigate("/posts");       /* posts ini kya yg di file (App.jsx) nama yg kalian buat */
       })
       .catch((error) => {
         //assign validation on state
-        setValidation(error.response.data);
+        setValidation(error.response.data);   /* buat nge ganti nilai dari state validation */
       });
   };
 
