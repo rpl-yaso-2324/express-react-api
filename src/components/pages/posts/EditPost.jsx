@@ -39,6 +39,8 @@ function EditPost() {
         //get data from server
         const response = await axios.get(`http://localhost:3000/api/postingan/${id}`);
         //get response data
+        //response adalah suatu objek respon dari axios
+        //data adalah property dari axios/data yang ada pada axios
         const data = await response.data.data
 
         //assign data to state
@@ -59,7 +61,7 @@ function EditPost() {
         .then(() => {
 
             //redirect
-            navigate.push('/posts');
+            navigate('/posts');
 
         })
         .catch((error) => {

@@ -1,4 +1,4 @@
-//import 2 hook useState(untuk meyimpan data) dan useEffect( untuk mengatur efek samping dalam komponen fungsional) from react
+//import 2 hook useState(untuk meyimpan data) dan useEffect( untuk mengatur efek samping dalam komponen fungsional,, menjalankan fungsi colback saat render) from react
 import { useState, useEffect } from 'react';
 
 //import react router dom, agar bisa membuat tautan link yang mengarahkan pada rute lain
